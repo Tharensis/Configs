@@ -7,6 +7,8 @@ do
 	source "$i"
 done
 
+cd
+
 if [ -n $_FROM_XPROFILE ]
 then
 	case $1 in
