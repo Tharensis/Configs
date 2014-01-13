@@ -35,7 +35,7 @@ bindsym $mod+Shift+Return exec "gksudo ~/.i3/urxvt_launch.sh"
 bindsym $mod+u exec uzbl-browser
 
 # open alsamixer and put it in a sane location
-bindsym $mod+Shift+a exec urxvtc -e alsamixer
+bindsym $mod+Shift+a exec ~/.i3/urxvt_launch.sh -e alsamixer
 for_window [title="alsamixer"] floating enable
 for_window [title="alsamixer"] move absolute position 0 px 0 px
 
