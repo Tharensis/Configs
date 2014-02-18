@@ -13,7 +13,7 @@ set from=jcjoshuachase@gmail.com
 set hostname=gmail.com
 
 # specify the uid to use when encrypting/signing
-set pgp_sign_as=0xEC950614
+set pgp_sign_as=0xA2ECAD48
 source ~/.mutt/gpg-encryptsign
 
 set smtp_url=smtps://$imap_user:$imap_pass@smtp.gmail.com

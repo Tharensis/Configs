@@ -4,3 +4,5 @@ alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias cryptmount='encfs -i 5 ~/Dropbox/EncFS ~/EncFS'
 alias pacman='sudo pacman'
+alias which=type
+
