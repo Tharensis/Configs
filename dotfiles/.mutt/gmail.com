@@ -12,6 +12,9 @@ set realname = "Josh Chase"
 set from=jcjoshuachase@gmail.com
 set hostname=gmail.com
 
+set query_command="$HOME/.local/goobook/bin/goobook query '%s'"
+macro index,pager a "<pipe-message>$HOME/.local/goobook/bin/goobook add<return>" "add the sender address to Google contacts"
+
 # specify the uid to use when encrypting/signing
 set pgp_sign_as=0xA2ECAD48
 source ~/.mutt/gpg-encryptsign

@@ -101,5 +101,5 @@ bt() {
 	-ex "echo \n\nthreads backtrace:\n" -ex "thread apply all backtrace" \
 	-ex "set logging off" \
 	-ex "quit" \
-	--args $1 2>/dev/null && cat gdb.bt
+	--args $@ 2>/dev/null && cat gdb.bt
 }

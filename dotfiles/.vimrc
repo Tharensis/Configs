@@ -1,13 +1,12 @@
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+set enc=utf-8 tenc=utf-8
 au BufNewFile,BufRead *.tex set ft=tex
 au FileType tex setl spell spelllang=en
 au FileType tex setl tw=72
 
-syntax off
-filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
-syntax on
-filetype plugin indent on
-set enc=utf-8 tenc=utf-8
 
 set autoindent
 set smartindent
