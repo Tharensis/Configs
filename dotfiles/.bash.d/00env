@@ -1,10 +1,15 @@
 . /etc/profile
 
 EDITOR="vim"; export EDITOR
+TERMINAL="~/.i3/urxvt_launch.sh"
 
 # disable annoying x11-ssh-askpass prompt
 export GIT_ASKPASS=""
 
 export XDG_CONFIG_HOME=$HOME/.config
+export MSF_DATABASE_CONFIG=/usr/share/metasploit/config/database.yml
 
 [ -e /usr/share/doc/pkgfile/command-not-found.bash ] && source /usr/share/doc/pkgfile/command-not-found.bash
+
+# vi mode for shiggles
+set -o vi
