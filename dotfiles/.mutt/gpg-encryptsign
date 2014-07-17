@@ -25,3 +25,6 @@ set crypt_autoencrypt=no
 set crypt_replyencrypt=yes
 # encrypt and sign replies to encrypted messages
 set crypt_replysignencrypted=yes
+
+# inline pgp
+message-hook '!(~g|~G) ~b"^-----BEGIN\ PGP\ (SIGNED\ )?MESSAGE"' "exec check-traditional-pgp"

@@ -10,6 +10,3 @@ export XDG_CONFIG_HOME=$HOME/.config
 export MSF_DATABASE_CONFIG=/usr/share/metasploit/config/database.yml
 
 [ -e /usr/share/doc/pkgfile/command-not-found.bash ] && source /usr/share/doc/pkgfile/command-not-found.bash
-
-# vi mode for shiggles
-set -o vi

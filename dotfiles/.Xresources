@@ -9,10 +9,17 @@ Xft.hintstyle:  hintfull
 URxvt*depth: 32
 URxvt*background: [75]#000000
 URxvt*foreground: White
-URxvt*fading:     30
+!URxvt*fading:     30
 URxvt*fadeColor:  #000000
 !URxvt*transparent: true
 !URxvt*shading: 25
+
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+URxvt.keysym.C-Delete: perl:matcher:last
+URxvt.keysym.M-Delete: perl:matcher:list
 
 *font: -*-terminus-medium-r-*-*-16-*-*-*-*-*-iso10646-*
 
