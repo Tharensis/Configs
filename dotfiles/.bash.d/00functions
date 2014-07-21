@@ -42,35 +42,6 @@ remove_pacnew()
 	done
 }
 
-setup_chroot()
-{
-	local binds
-	binds="/dev /sys /sys/fs/cgroup"
-	for i in $binds
-	do
-		sudo mount --bind $i /mnt$i
-	done
-
-	sudo mount -t proc none /mnt/proc
-}
-
-enter_chroot()
-{
-	setup_chroot
-
-	sudo chroot /mnt
-}
-
-teardown_chroot()
-{
-	local binds
-	binds="/dev /sys/fs/cgroup /sys /proc"
-	for i in $binds
-	do
-		sudo umount /home/chroot$i
-	done
-}
-
 man() {
 	env LESS_TERMCAP_mb=$(printf "\e[1;31m") \
 	LESS_TERMCAP_md=$(printf "\e[1;31m") \
@@ -103,3 +74,18 @@ bt() {
 	-ex "quit" \
 	--args $@ 2>/dev/null && cat gdb.bt
 }
+
+rerunsudo() {
+	"$@"
+	if [ 0 -ne $? ]
+	then
+		echo -e '\nRe-running as root!\n' && /usr/bin/sudo "$@"
+	fi
+}
+
+if [ ! -v USE_RVM ]
+then
+rvm() {
+	[ -z "$@" ] && USE_RVM=1 /bin/bash || USE_RVM=1 /bin/bash -i -c "$@"
+}
+fi

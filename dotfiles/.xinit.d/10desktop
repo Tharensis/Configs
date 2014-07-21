@@ -8,5 +8,5 @@ xset s off
 xset -b
 xautolock -locker "i3lock -d -n -c 000000" -time 5 &
 pamusb-agent &
-wicd-gtk -t &
 pulseaudio --start
+nm-applet &

@@ -1,4 +1,4 @@
-GOPATH=$HOME/Go; export GOPATH
+GOPATH=$HOME/Dev; export GOPATH
 GOROOT=$HOME/.local/lib/go; export GOROOT
 
 pathmunge $GOPATH/bin

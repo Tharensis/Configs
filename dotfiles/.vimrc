@@ -10,7 +10,7 @@ Plugin 'wting/rust.vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/restore_view.vim'
-Plugin 'FredKSchott/CoVim'
+Plugin 'altercation/vim-colors-solarized'
 
 syntax on
 filetype plugin indent on
@@ -27,7 +27,8 @@ set tabstop=4
 set shiftwidth=4
 set number
 
-colo slate
+set background=dark
+colo ron
 
 set hlsearch
 hi Search ctermbg=DarkBlue ctermfg=White
