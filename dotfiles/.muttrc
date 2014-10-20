@@ -16,7 +16,7 @@ set header_cache = "~/.cache/mutt"
 set alias_file = ~/.mutt/aliases
 source ~/.mutt/colors
 source ~/.mutt/aliases
-source ~/.mutt/sidebar
+#source ~/.mutt/sidebar
 
 #source ~/.mutt/louisville.edu
 #folder-hook $folder 'source ~/.mutt/louisville.edu'

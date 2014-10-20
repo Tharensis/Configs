@@ -4,13 +4,18 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Plugin 'gmarik/vundle'
-Plugin 'jnwhiteh/vim-golang'
+Plugin 'fatih/vim-go'
+Plugin 'fatih/molokai'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'Shougo/neocomplete.vim'
 Plugin 'BurntSushi/vim-toml'
 Plugin 'wting/rust.vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/restore_view.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'eglimi/vim-rust'
 
 syntax on
 filetype plugin indent on
@@ -44,3 +49,14 @@ set scrolloff=10
 map <C-n> :NERDTreeToggle<CR>
 
 command W w ! sudo tee %
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)

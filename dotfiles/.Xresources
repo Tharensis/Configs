@@ -1,3 +1,13 @@
+x11-ssh-askpass*background:             #000000
+x11-ssh-askpass*foreground:             #ffffff
+x11-ssh-askpass.Button*background:      #000000
+x11-ssh-askpass.Indicator*foreground:   #ff9900
+x11-ssh-askpass.Indicator*background:   #0a0a0a
+x11-ssh-askpass*topShadowColor:         #000000
+x11-ssh-askpass*bottomShadowColor:      #000000
+x11-ssh-askpass.*borderWidth:           1
+x11-ssh-askpass*font: -*-terminus-medium-r-*-*-18-*-*-*-*-*-iso10646-*
+
 Xft.dpi:        96
 Xft.antialias:  true
 Xft.rgba:       rgb
@@ -21,11 +31,21 @@ URxvt.matcher.button: 1
 URxvt.keysym.C-Delete: perl:matcher:last
 URxvt.keysym.M-Delete: perl:matcher:list
 
-*font: -*-terminus-medium-r-*-*-16-*-*-*-*-*-iso10646-*
+*font: -*-terminus-medium-r-*-*-18-*-*-*-*-*-iso10646-*
+! :Bind C-0, C-+ and C-= to activate small, medium, and big font size resp.     
+URxvt.keysym.C-0: command:\033]710;-*-terminus-medium-r-normal--18-*-*-*-*-*-*-*\007
+URxvt.keysym.C-minus: command:\033]710;-*-terminus-medium-r-*--16-*-*-*-*-*-*-*\007
+URxvt.keysym.C-equal: command:\033]710;-*-terminus-medium-r-*--24-*-*-*-*-*-*-*\007
+
+! Start new terminal in same directory
+URxvt.keysym.C-S-N: ~/.i3/urxvt_launch.sh\n
 
 URxvt*saveLines: 12000
 URxvt*scrollstyle:plain
 URxvt*cursorBlink: true
+URxvt*secondaryScreen: true
+URxvt*secondaryScroll: false
+URxvt*secondaryWheel: true
 
 *scrollBar: false
 *loginShell: true

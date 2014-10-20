@@ -10,6 +10,18 @@ pathmunge () {
 	fi
 }
 
+ldmunge () {
+	if [ -e $1 ]; then
+		if ! echo $LD_LIBRARY_PATH | egrep -q "(^|:)$1($|:)" ; then
+			 if [ "$2" = "after" ] ; then
+				LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$1
+			 else
+				LD_LIBRARY_PATH=$1:$LD_LIBRARY_PATH
+			 fi
+		fi
+	fi
+}
+
 new_startx()
 {
 	/usr/bin/startx &
@@ -83,9 +95,13 @@ rerunsudo() {
 	fi
 }
 
+tothemax() {
+	echo http://koalastothemax/?$(echo $1 | base64 -w 0)
+}
+
 if [ ! -v USE_RVM ]
 then
 rvm() {
-	[ -z "$@" ] && USE_RVM=1 /bin/bash || USE_RVM=1 /bin/bash -i -c "$@"
+	[ -z $@ ] && USE_RVM=1 /bin/bash || USE_RVM=1 /bin/bash -i -c "$@"
 }
 fi
