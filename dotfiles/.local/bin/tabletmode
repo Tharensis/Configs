@@ -1,0 +1,16 @@
+case $(xsetwacom get "Wacom ISDv4 E6 Pen stylus" Rotate) in
+	none) 	# Screen is not rotated, we should invert it
+		xrandr -o 2
+		xsetwacom set "Wacom ISDv4 E6 Pen stylus" Rotate 3
+		xinput --disable "TPPS/2 IBM TrackPoint"
+		;;
+	half)	# Screen is inverted, we should make it upright
+		xrandr -o 0
+		xsetwacom set "Wacom ISDv4 E6 Pen stylus" Rotate 0
+		xinput --enable "TPPS/2 IBM TrackPoint"
+		;;
+	*)
+		echo "Unknown result from 'xsetwacom get 'Wacom ISDv4 E6 Pen stylus' Rotate'"
+		exit 1
+		;;
+esac

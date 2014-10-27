@@ -1,3 +1,0 @@
-export MATLAB="$HOME/.local/MATLAB/MATLAB_Production_Server/R2013a"
-
-pathmunge $MATLAB/bin
