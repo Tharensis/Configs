@@ -1,6 +1,7 @@
-#leapd &
-pamusb-agent &
-#VBoxClient-all &
-dropbox start -i
-#pidgin &
-#xflux -z 40208
+wicd-gtk -t &
+synclient TouchpadOff=1
+dropboxd &
+xbindkeys
+cellwriter &
+xsetwacom --set "WacomISDv4 E6 Finger touch" Touch off
+xautolock -time 10 -locker 'i3lock -c 000000 -d' &

@@ -16,8 +16,7 @@ TEXT
 ${if_match "$gw_iface"=="(null)"}  {"full_text" : " Network Unavailable " , "color" : "\#FF173E" }, ${endif}
 ${if_match "$gw_iface"=="wlan0"}  {"full_text" : " ≈ ${wireless_essid wlan0} [${wireless_link_qual_perc wlan0}%] on ${addr wlan0} " , "color" : "\#33CC99" }, ${endif}
 ${if_match "$gw_iface"=="eth0"}  {"full_text" : " ⇋ eth0 on ${addr eth0} " , "color" : "\#4C7899" }, ${endif}
-  {"full_text": " ☇ BAT0 [${battery_bar BAT0}] ${battery_time BAT0} "},
-  {"full_text": " ☇ BAT1 [${battery_bar BAT1}] ${battery_time BAT1} "},
+  {"full_text": " ☇ BAT [${battery_bar BAT0}] ${battery_time BAT0} "},
   {"full_text": " ♫ [${exec amixer get Master -M | grep -oE "[[:digit:]]*%" | head -n 1}] ", "color":"\#00ddff"},
   {"full_text": " [${time %a %d %b} ${time %H:%M}] ","color": "\#2fdc57"}
 ]
