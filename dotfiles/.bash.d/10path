@@ -1,4 +1,0 @@
-pathmunge $HOME/.local/bin
-pathmunge $HOME/.local/openstack/bin
-
-export PATH
