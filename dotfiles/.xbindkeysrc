@@ -1,0 +1,11 @@
+"tabletmode"
+	XF86RotateWindows
+
+"xterm"
+	XF86TaskPane
+
+"amixer set Master 5+ > /dev/null"
+	XF86AudioRaiseVolume
+
+"amixer set Master 5- > /dev/null"
+	XF86AudioLowerVolume
