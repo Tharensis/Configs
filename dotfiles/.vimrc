@@ -1,23 +1,8 @@
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Plugin 'gmarik/vundle'
-Plugin 'fatih/vim-go'
-Plugin 'fatih/molokai'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'BurntSushi/vim-toml'
-Plugin 'wting/rust.vim'
-Plugin 'tpope/vim-markdown'
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-scripts/restore_view.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'eglimi/vim-rust'
-
 syntax on
+
 filetype plugin indent on
 
 set enc=utf-8 tenc=utf-8
