@@ -16,3 +16,9 @@ vim
 feh
 screen
 alsa-utils
+xf86-video-intel
+xf86-input-wacom
+xf86-input-synaptics
+thunar
+lxappearance
+gnome-icon-theme

@@ -1,4 +1,3 @@
-wicd-gtk -t &
 synclient TouchpadOff=1
 dropboxd &
 xbindkeys

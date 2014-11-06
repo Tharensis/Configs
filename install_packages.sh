@@ -1,2 +1,2 @@
 #!/bin/bash
-xargs pacman -S < packages.list
+xargs pacman -S --noconfirm < packages.list
