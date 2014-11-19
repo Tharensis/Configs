@@ -2,6 +2,7 @@
 
 EDITOR="vim"; export EDITOR
 TERMINAL="~/.i3/urxvt_launch.sh"
+BROWSER="google-chrome"
 
 export XDG_CONFIG_HOME=$HOME/.config
 
