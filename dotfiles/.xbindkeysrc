@@ -1,7 +1,7 @@
 "tabletmode"
 	XF86RotateWindows
 
-"xterm"
+"urxvt"
 	XF86TaskPane
 
 "amixer set Master 5+ > /dev/null"
