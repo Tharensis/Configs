@@ -49,8 +49,8 @@ Section "InputClass"
         Option "SoftButtonAreas" "0 0 0 0 0 0 0 0"
 EndSection
 
-#synclient TouchpadOff=1
-Option "TouchpadOff" "1"
+synclient TouchpadOff=1
+#Option "TouchpadOff" "1"
 
 Section "InputClass"
 	Identifier	"ThinkPad TrackPoint"
