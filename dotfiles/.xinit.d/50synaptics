@@ -50,7 +50,7 @@ Section "InputClass"
 EndSection
 
 #synclient TouchpadOff=1
-#Option "TouchpadOff" "1"
+Option "TouchpadOff" "1"
 
 Section "InputClass"
 	Identifier	"ThinkPad TrackPoint"
