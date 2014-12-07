@@ -1,2 +1,0 @@
-_FROM_XPROFILE=true
-source ~/.xinitrc
