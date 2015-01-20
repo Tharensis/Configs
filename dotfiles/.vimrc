@@ -1,8 +1,15 @@
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-syntax on
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
+Plugin 'gmarik/Vundle.vim'
+Plugin 'vim-scripts/ctags.vim'
+Plugin 'vim-scripts/c.vim'
+
+call vundle#end()
+
+syntax on
 filetype plugin indent on
 
 set enc=utf-8 tenc=utf-8
@@ -17,6 +24,8 @@ set tabstop=4
 set shiftwidth=4
 set number
 
+set tags=tags;
+
 set background=dark
 colo ron
 
@@ -30,18 +39,3 @@ set undolevels=1000
 set undoreload=10000
 
 set scrolloff=10
-
-map <C-n> :NERDTreeToggle<CR>
-
-command W w ! sudo tee %
-
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
-au FileType go nmap <Leader>gd <Plug>(go-doc)
-au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
