@@ -1,9 +1,9 @@
 . /etc/profile
 
 EDITOR="vim"; export EDITOR
-TERMINAL="~/.i3/urxvt_launch.sh"
-BROWSER="google-chrome-stable"
+GOPATH=~/go; export GOPATH
 
 export XDG_CONFIG_HOME=$HOME/.config
+export PATH="$PATH:$GOPATH/bin"
 
 [ -e /usr/share/doc/pkgfile/command-not-found.bash ] && source /usr/share/doc/pkgfile/command-not-found.bash

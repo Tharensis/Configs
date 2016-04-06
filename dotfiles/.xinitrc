@@ -1,11 +1,11 @@
 . /etc/profile
 
-DEFAULT='dbus-launch --exit-with-session i3'
+DEFAULT='startxfce4'
 
-for i in ~/.xinit.d/*
-do
-	source "$i"
-done
+# for i in ~/.xinit.d/*
+# do
+# 	source "$i"
+# done
 
 cd
 

@@ -24,7 +24,7 @@ URxvt*fadeColor:  #000000
 !URxvt*transparent: true
 !URxvt*shading: 25
 
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matching
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 
